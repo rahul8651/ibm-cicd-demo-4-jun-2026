@@ -13,6 +13,11 @@ describe('Simple CI/CD Demo App', () => {
     expect(res.statusCode).toBe(200);
   });
 
+  it('GET / does not return status 404', async () => {
+    const res = await request(app).get('/');
+    expect(res.statusCode).not.toBe(404);
+  });
+
   it('GET /health returns UP status', async () => {
     const res = await request(app).get('/health');
     expect(res.body.status).toBe('UP');
