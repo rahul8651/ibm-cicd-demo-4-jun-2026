@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 const MESSAGE = 'Hello from the IBM CI/CD Demo!';
 
 app.get('/', (req, res) => {
-  console.log(req);
+  console.log(req.method, req.url);
   res.json({
     message: MESSAGE,
     version: process.env.APP_VERSION || '1.0.0',
