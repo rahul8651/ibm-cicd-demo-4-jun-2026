@@ -34,6 +34,6 @@ describe("Simple CI/CD Demo App", () => {
 
   it("GET / returns the expected welcome message", async () => {
     const res = await request(app).get("/");
-    expect(res.body.message).toBe("Welcome to the Simple CI/CD Demo App");
+    expect(res.body.message).toBe("Hello from the IBM CI/CD Demo!");
   });
 });
