@@ -18,7 +18,7 @@ pipeline {
     // }
 
     environment {
-        IMAGE_NAME = "vamandeshmukh/ibm-cicd-demo"
+        IMAGE_NAME = "rahul8651/ibm-cicd-demo"
         IMAGE_TAG  = "${env.BUILD_NUMBER}"
     }
 
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/dyesmuk/ibm-cicd-demo-4-jun-2026.git'
+                git branch: 'main', url: 'https://github.com/rahul8651/ibm-cicd-demo-4-jun-2026.git'
             }
         }
 
